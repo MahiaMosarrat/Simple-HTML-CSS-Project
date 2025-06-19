@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapter 20</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        background-color: #f1f1f1;
+        padding: 20px;
+      }
+
+      h2 {
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 24px;
+      }
+
+      .example-container {
+        width: 70%;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+        margin-bottom: 40px;
+      }
+
+      .ball {
+        width: 100px;
+        height: 100px;
+        background-color: #3498db;
+        border-radius: 50%;
+        margin-bottom: 30px;
+      }
+
+      .ball-delay {
+        animation: moveDelay 2s infinite;
+        animation-delay: 1s;
+      }
+
+      @keyframes moveDelay {
+        0% {
+          transform: translateX(0);
+        }
+        50% {
+          transform: translateX(200px);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+
+      .ball-iteration {
+        animation: moveIteration 3s forwards;
+      }
+
+      @keyframes moveIteration {
+        0% {
+          transform: translateY(0);
+        }
+        100% {
+          transform: translateY(-200px);
+        }
+      }
+
+      .ball-direction {
+        animation: moveDirection 2s infinite alternate-reverse;
+      }
+
+      @keyframes moveDirection {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(150px);
+        }
+      }
+
+      .ball-timing {
+        animation: moveTiming 2s infinite ease-in-out;
+      }
+
+      @keyframes moveTiming {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-150px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+
+      .example-button {
+        padding: 20px;
+        background-color: #4caf50;
+        color: white;
+        font-size: 18px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+      }
+
+      .basic-transition-button {
+        background-color: #4caf50;
+        transition: background-color 0.5s ease-in-out;
+      }
+
+      .basic-transition-button:hover {
+        background-color: #45a049;
+      }
+
+      .transition-delay-button {
+        background-color: #2196f3;
+        transition: background-color 1s ease-in-out;
+      }
+
+      .transition-delay-button:hover {
+        background-color: #0b7dda;
+      }
+
+      .timing-function-button {
+        background-color: #ff9800;
+        transition: background-color 1s ease-out;
+      }
+
+      .timing-function-button:hover {
+        background-color: #e68900;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="example-container">
+      <h2>Animation Delay</h2>
+      <div class="ball ball-delay"></div>
+      <p>This ball starts moving after a 1-second delay.</p>
+    </div>
+
+    <div class="example-container">
+      <h2>Animation Iteration Count</h2>
+      <div class="ball ball-iteration"></div>
+      <p>This ball moves only once and stays in the final position.</p>
+    </div>
+
+    <div class="example-container">
+      <h2>Animation Direction</h2>
+      <div class="ball ball-direction"></div>
+      <p>
+        This ball moves horizontally with reverse direction on alternate
+        iterations.
+      </p>
+    </div>
+
+    <div class="example-container">
+      <h2>Animation Timing Function</h2>
+      <div class="ball ball-timing"></div>
+      <p>This ball moves with an ease-in-out timing function.</p>
+    </div>
+
+    <div class="example-container">
+      <h2>Basic Transitions</h2>
+      <button class="example-button basic-transition-button">
+        Hover to Change Color
+      </button>
+    </div>
+
+    <div class="example-container">
+      <h2>Transition Delay</h2>
+      <button class="example-button transition-delay-button">
+        Hover to Change Color (1s delay)
+      </button>
+    </div>
+
+    <div class="example-container">
+      <h2>Transition Timing Function</h2>
+      <button class="example-button timing-function-button">
+        Hover to Change Color (Ease-Out)
+      </button>
+    </div>
+  </body>
+</html>

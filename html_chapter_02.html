@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapter 02</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        color: #333;
+      }
+
+      header {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        height: 70px;
+        line-height: 40px;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 25px;
+        line-height: 40px;
+      }
+
+      header p {
+        margin: 0;
+        font-size: 15px;
+        line-height: 25px;
+      }
+
+      .sidebar {
+        height: 100%;
+        width: 250px;
+        position: fixed;
+        top: 65px;
+        left: 0;
+        background-color: #338578;
+        padding-top: 20px;
+        color: white;
+        overflow-y: auto;
+        box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .sidebar a {
+        padding: 12px 16px;
+        text-decoration: none;
+        font-size: 18px;
+        color: white;
+        display: block;
+        border-bottom: 1px solid #444;
+        transition: background-color 0.3s ease;
+      }
+
+      .sidebar a:hover {
+        background-color: #575757;
+      }
+
+      .sidebar a.active {
+        background-color: #03694a;
+        font-weight: bold;
+      }
+
+      .dropdown {
+        display: none;
+        background-color: #3d6953;
+        padding-left: 20px;
+      }
+
+      .dropdown a {
+        font-size: 16px;
+        padding: 10px 16px;
+        text-decoration: none;
+        color: white;
+        display: block;
+        border-bottom: 1px solid #555;
+      }
+
+      .dropdown a:hover {
+        background-color: #0f5046;
+      }
+
+      .dropdown-toggle {
+        cursor: pointer;
+      }
+
+      .sidebar a:hover + .dropdown,
+      .dropdown:hover {
+        display: block;
+      }
+
+      .main-content {
+        margin-left: 260px;
+        margin-top: 65px;
+        padding: 20px;
+      }
+
+      .main-content h1 {
+        color: #333;
+        font-size: 32px;
+      }
+
+      .main-content p {
+        font-size: 18px;
+        color: #555;
+      }
+
+      section {
+        margin: 20px;
+        padding: 20px;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        color: #333;
+        border-bottom: 2px solid #ddd;
+        padding-bottom: 5px;
+      }
+
+      h3 {
+        color: #555;
+        margin-top: 10px;
+      }
+
+      p {
+        line-height: 1.6;
+      }
+
+      a {
+        color: #1a73e8;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .list {
+        margin-left: 20px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+      }
+
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #f4f4f4;
+      }
+
+      .progress {
+        width: 100%;
+        height: 25px;
+        margin-top: 10px;
+      }
+
+      .code-block {
+        background-color: #f4f4f4;
+        padding: 10px;
+        border-radius: 4px;
+        font-family: "Courier New", monospace;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+      }
+
+      iframe {
+        width: 100%;
+        height: 300px;
+        border: none;
+        margin-top: 10px;
+      }
+
+      @media (max-width: 768px) {
+        .sidebar {
+          width: 100%;
+          height: auto;
+          top: 160px;
+        }
+
+        .main-content {
+          margin-left: 0;
+          margin-top: 160px;
+        }
+
+        header {
+          padding: 10px;
+          font-size: 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Chapter 2</h1>
+      <p>HTML ELEMENTS</p>
+    </header>
+
+    <div class="sidebar">
+      <a href="#6_headings" class="active dropdown-toggle">HEADINGS</a>
+      <a href="#paragraphs" class="dropdown-toggle">PARAGRAPHS</a>
+      <a href="#hyperlinks" class="dropdown-toggle">HYPERLINKS</a>
+      <div class="dropdown">
+        <a href="#exAnc">External Anchors</a>
+        <a href="#inAnc">Internal Anchors</a>
+        <a href="#dLink">Download Links</a>
+      </div>
+      <a href="#" class="dropdown-toggle">IMAGES</a>
+      <div class="dropdown">
+        <a href="#">Image Maps</a>
+        <a href="#">Responsive Pictures</a>
+      </div>
+      <a href="#" class="dropdown-toggle">LISTS</a>
+      <div class="dropdown">
+        <a href="#">Unordered List </a>
+        <a href="#">Ordered List </a>
+        <a href="#">Description Lists </a>
+      </div>
+      <a href="#" class="dropdown-toggle">TABLES</a>
+      <div class="dropdown">
+        <a href="#">Table Headers</a>
+        <a href="#">Table Rows </a>
+        <a href="#">Table Caption</a>
+        <a href="#">Group of Columns</a>
+        <a href="#">Column Span</a>
+      </div>
+      <a href="#" class="dropdown-toggle">BREAKS</a>
+      <div class="dropdown">
+        <a href="#">Line Breaking</a>
+        <a href="#">Thematic Breaking </a>
+      </div>
+      <a href="#" class="dropdown-toggle">PROGRESS BARS</a>
+      <div class="dropdown">
+        <a href="#"> Progress </a>
+        <a href="#"> Meter </a>
+      </div>
+      <a href="#" class="dropdown-toggle">COMPUTER CODE</a>
+      <div class="dropdown">
+        <a href="#"> Code </a>
+        <a href="#"> Pre </a>
+      </div>
+      <a href="#" class="dropdown-toggle">IFRAMES</a>
+      <a href="#" class="dropdown-toggle">HTML ENTITIES</a>
+    </div>
+
+    <div class="main-content">
+      <h1>HTML Tutorial</h1>
+      <p>
+        Welcome to the HTML tutorial page. Here you can find a lot of useful
+        information. Click on the items in the sidebar to learn more about
+        different HTML elements and attributes.
+      </p>
+
+      <section>
+        <h1 id="6_headings">Headings</h1>
+        <h2>Real-World Example: Blog Post Title</h2>
+        <h3>10 Tips for Creating a Stunning Website</h3>
+        <h4>How to Improve Your Web Design Skills</h4>
+        <h5>Exploring New Trends in Web Development</h5>
+        <h6>Why Learning HTML and CSS is Important in 2025</h6>
+      </section>
+
+      <section style="background-color: rgb(128, 212, 178)">
+        <h2 id="paragraphs">Paragraphs</h2>
+        <p>
+          The <strong>Smartphone X</strong> offers cutting-edge technology,
+          including a 108MP camera, 5G connectivity, and a stunning AMOLED
+          display. It's designed to meet the needs of both tech enthusiasts and
+          casual users, combining power with sleek aesthetics.
+        </p>
+      </section>
+
+      <section>
+        <h2 id="hyperlinks">Hyperlinks</h2>
+        <h3 id="exAnc">External Anchors</h3>
+        <p>
+          Visit our official
+          <a href="https://en.wikipedia.org/wiki/Technology" target="_blank"
+            >TechWorld website</a
+          >
+          for more tech updates.
+        </p>
+        <h3 id="inAnc">Internal Anchors</h3>
+        <p>
+          Learn more about <a href="#6_headings">Web Design</a> by visiting our
+          dedicated section.
+        </p>
+        <h3 id="dLink">Download Links</h3>
+        <p>
+          Download the latest software update for your device
+          <a href="downloads/software-update.zip" download>here</a>.
+        </p>
+      </section>
+
+      <section>
+        <h2>2.4 Images</h2>
+        <h3>2.4.1 Image</h3>
+        <img
+          src="https://www.example.com/images/smartphone-x.jpg"
+          alt="Smartphone X"
+        />
+        <h3>2.4.2 Image Maps</h3>
+        <p>Explore our product range by clicking on the image below:</p>
+        <img
+          src="https://www.example.com/images/product-range.jpg"
+          usemap="#product-map"
+          alt="Product Range"
+        />
+        <map name="product-map">
+          <area
+            shape="rect"
+            coords="50,50,150,150"
+            href="https://www.example.com/product/1"
+            alt="Product 1"
+          />
+          <area
+            shape="rect"
+            coords="200,50,300,150"
+            href="https://www.example.com/product/2"
+            alt="Product 2"
+          />
+        </map>
+      </section>
+
+      <section>
+        <h2>2.5 Lists</h2>
+        <h3>2.5.1 Unordered List</h3>
+        <ul class="list">
+          <li>High-resolution camera</li>
+          <li>Fast charging technology</li>
+          <li>Water-resistant design</li>
+          <li>Expandable storage options</li>
+        </ul>
+        <h3>2.5.2 Ordered List</h3>
+        <ol class="list">
+          <li>Step 1: Set up your account</li>
+          <li>Step 2: Choose your subscription plan</li>
+          <li>Step 3: Start enjoying premium features</li>
+        </ol>
+        <h3>2.5.3 Description Lists</h3>
+        <dl>
+          <dt>HTML</dt>
+          <dd>The foundation of web development.</dd>
+          <dt>CSS</dt>
+          <dd>Styles the appearance of your web pages.</dd>
+        </dl>
+      </section>
+
+      <section>
+        <h2>2.6 Tables</h2>
+        <h3>2.6.1 Product Comparison</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Features</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Smartphone X</td>
+              <td>$999</td>
+              <td>108MP camera, 8GB RAM, 128GB Storage</td>
+            </tr>
+            <tr>
+              <td>Smartphone Y</td>
+              <td>$799</td>
+              <td>64MP camera, 6GB RAM, 64GB Storage</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>2.8 Progress Bars</h2>
+        <h3>2.8.1 File Upload Progress</h3>
+        <progress value="70" max="100" class="progress"></progress>
+        <h3>2.8.2 Task Completion</h3>
+        <meter value="0.7" min="0" max="1" low="0.3" high="0.7" optimum="0.9">
+          70% Task Completed
+        </meter>
+      </section>
+
+      <section>
+        <h2>2.9 Computer Code</h2>
+        <h3>2.9.1 Inline Code</h3>
+        <p>Use the <code>console.log()</code> function for debugging.</p>
+        <h3>2.9.2 Code Block</h3>
+        <pre class="code-block">
+function greetUser() {
+    console.log("Hello, World!");
+}
+        </pre>
+      </section>
+
+      <section>
+        <h2>2.10 Iframes</h2>
+        <h3>2.10.1 Embedded Video</h3>
+        <iframe
+          src="https://www.youtube.com/watch?v=qz0aGYrrlhU"
+          title="YouTube video"
+        ></iframe>
+      </section>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapter 19</title>
+    <style>
+      div {
+        border: 1px solid black;
+      }
+      .container {
+        position: relative;
+        width: 100px;
+        height: 100px;
+      }
+      .child {
+        width: 100px;
+        height: 100px;
+        background-color: white;
+      }
+      .absolute {
+        position: absolute;
+        border: 1px solid red;
+        text-align: right;
+      }
+      .z-index-minus-two {
+        z-index: -2;
+        left: 100px;
+        top: 5px;
+      }
+      .z-index-minus-one {
+        z-index: -1;
+        left: 70px;
+        top: 35px;
+      }
+      .z-index-zero {
+        z-index: 0;
+        left: 40px;
+        top: 65px;
+      }
+      .z-index-one {
+        z-index: 1;
+        left: 10px;
+        top: 95px;
+      }
+      .z-index-two {
+        z-index: 2;
+      }
+      .parent {
+        height: 200px;
+        width: 200px;
+        border: 1px dashed rgb(202, 18, 18);
+        margin-top: 100px;
+      }
+      .normal {
+        border: 1px dashed blue;
+      }
+      .relative {
+        border: 1px solid green;
+        position: relative;
+        left: 30px;
+        top: 30px;
+      }
+      .parent1 {
+        width: 200px;
+        height: 200px;
+        overflow: auto;
+        margin-top: 30px;
+      }
+      .sticky {
+        position: sticky;
+        top: 0;
+        border: 1px solid red;
+        background-color: yellow;
+      }
+      .positioned {
+        position: relative;
+        border: 1px solid black;
+        width: 200px;
+        height: 200px;
+        margin-top: 30px;
+      }
+      .nonpositioned {
+        border: 1px dashed black;
+        width: 150px;
+        height: 150px;
+      }
+      .absolute {
+        position: absolute;
+        border: 1px dashed red;
+        background-color: white;
+        right: 30px;
+        top: 40px;
+      }
+      .big {
+        height: 500px;
+        border: 1px solid black;
+      }
+      .fixed {
+        border: 1px solid red;
+        width: 100px;
+        position: fixed;
+        right: 30px;
+        top: 30px;
+      }
+      .flex-container {
+        display: flex;
+
+        flex-wrap: wrap;
+        align-content: flex-start;
+        border: 1px solid black;
+        width: 500px;
+        height: 150px;
+        gap: 20px;
+        margin-top: 20px;
+      }
+      .flex-item {
+        border: 1px solid red;
+        flex-basis: 120px;
+      }
+      .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+
+        column-gap: 10px;
+        row-gap: 10px;
+        justify-content: center;
+        border: 1px solid black;
+        width: 400px;
+        margin-top: 20px;
+        padding: 20px;
+      }
+      .grid-item {
+        border: 1px solid red;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="absolute child z-index-minus-two">CSS</div>
+      <div class="absolute child z-index-minus-one">CSS</div>
+      <div class="absolute child z-index-zero">CSS</div>
+      <div class="absolute child z-index-one">CSS</div>
+      <div class="child z-index-two">CSS</div>
+    </div>
+
+    <div class="parent">
+      <div class="normal">This div shows the Normal position.</div>
+      <div class="relative">This div shows the Relative position.</div>
+    </div>
+
+    <div class="parent1">
+      <p>
+        An element with position: sticky; is positioned based on the user's
+        scroll position.
+      </p>
+      <div class="sticky">I am sticky!</div>
+      <p>
+        A sticky element toggles between relative and fixed , depending on the
+        scroll position.
+      </p>
+      <p>
+        It is positioned relative until a given offset position is met in the
+        viewport.
+      </p>
+      <p>Then it "sticks" in place (like position:fixed).</p>
+    </div>
+
+    <div class="positioned">
+      Positioned
+      <div class="nonpositioned">nonpositioned</div>
+      <div class="absolute">Example of an absolute position.</div>
+    </div>
+
+    <div style="margin-top: 20px">Normal element</div>
+    <div class="fixed">Example of a fixed position</div>
+    <div class="big">Example of a big element.</div>
+
+    <div class="flex-container">
+      <div class="flex-item item1">
+        HTML defines the structure of web pages, including headings, paragraphs,
+        links, and images.
+      </div>
+      <div class="flex-item item2">
+        HTML ensures that websites look consistent across different devices.
+      </div>
+      <div class="flex-item item3">
+        HTML is easy to edit and code, even for beginners.
+      </div>
+    </div>
+
+    <div class="grid-container">
+      <div class="grid-item item1">Grid Box 1</div>
+      <div class="grid-item item2">Grid Box 2</div>
+      <div class="grid-item item3">Grid Box 3</div>
+      <div class="grid-item item4">Grid Box 4</div>
+      <div class="grid-item item5">Grid Box 5</div>
+      <div class="grid-item item6">Grid Box 6</div>
+      <div class="grid-item item7">Grid Box 7</div>
+      <div class="grid-item item8">Grid Box 8</div>
+      <div class="grid-item item9">Grid Box 9</div>
+    </div>
+  </body>
+</html>

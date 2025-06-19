@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapter 21</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background-color: #f5f5f5;
+      }
+
+      .section {
+        border: 1px solid #ddd;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        background-color: white;
+      }
+
+      body {
+        font-size: 12px;
+        counter-reset: my-section;
+      }
+
+      h1 {
+        counter-reset: my-sub-section;
+      }
+
+      h1::before {
+        counter-increment: my-section;
+        content: "Section " counter(my-section) ". ";
+      }
+
+      h2::before {
+        counter-increment: my-sub-section;
+        content: counter(my-section) "." counter(my-sub-section) " ";
+      }
+
+      :root {
+        --a-global-color: rgb(240, 204, 86);
+      }
+
+      section {
+        --a-local-color: skyblue;
+      }
+
+      header {
+        color: var(--a-global-color);
+      }
+
+      footer {
+        color: var(--a-local-color);
+      }
+
+      .sunny-day {
+        font-size: 18px;
+        line-height: 1.8;
+        color: #333;
+      }
+
+      .sunny-day p {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="section">
+      <header id="calc">Sunny Day</header>
+      <h1>CSS Calculation Example</h1>
+      <div class="main-content sunny-day">
+        <p>Welcome to a bright and beautiful sunny day!</p>
+        <p class="long-content">
+          A sunny day is a gift from nature. The skies are clear, the air is
+          warm, and the sun shines brightly overhead. Whether you're at the
+          beach, in the park, or just enjoying your backyard, sunny days bring a
+          sense of happiness and peace. They're a perfect opportunity to enjoy
+          outdoor activities, get some fresh air, and appreciate the beauty of
+          nature. Sunny days are also known to boost our mood, help us get more
+          vitamin D, and inspire us to be more active.
+        </p>
+      </div>
+      <footer id="calFooter">Enjoy the Sunshine!</footer>
+    </div>
+
+    <div class="section">
+      <h1>CSS Counters Example</h1>
+      <h1>Sunny Day Overview:</h1>
+      <h2>Introduction to Sunny Day</h2>
+      <h2>Why Sunny Days Are Important</h2>
+      <h1>Weather Patterns on Sunny Days:</h1>
+      <h2>Clear Skies and Bright Sunshine</h2>
+      <h2>Average Temperature During Sunny Days</h2>
+    </div>
+
+    <hr />
+
+    <div class="section">
+      <header>
+        <h1>CSS Variables Example</h1>
+        <h2>It's a Sunny Day!</h2>
+      </header>
+      <p>
+        The sun is shining brightly, the skies are clear, and it's a perfect day
+        to enjoy the outdoors.
+      </p>
+      <footer>
+        <p>
+          Stay hydrated and wear sunscreen while you enjoy the sunny weather!
+        </p>
+      </footer>
+    </div>
+
+    <footer>
+      <p style="text-align: center">Have a great sunny day!</p>
+    </footer>
+  </body>
+</html>

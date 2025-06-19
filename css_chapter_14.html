@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapter 14</title>
+    <style>
+      #cycling-box {
+        width: 70%;
+        padding: 20px;
+        margin: 20px auto;
+        box-sizing: content-box;
+        background-color: #f0f0f0;
+        border: 4px solid #000;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .fitness-box {
+        width: 70%;
+        padding: 20px;
+        margin: 20px auto;
+        box-sizing: border-box;
+        background-color: #e0e0e0;
+        border: 4px solid #000;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      #gardening-box {
+        width: 70%;
+        padding: 20px;
+        margin: 20px auto;
+        background-color: #f0f8f0;
+        border: 4px solid #006400;
+        outline: 2px solid #228b22;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      }
+
+      .reading-box {
+        width: 70%;
+        padding: 20px;
+        margin: 20px auto;
+        background-color: #f8f0f0;
+        border: 4px solid #8b0000;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      }
+
+      #exercise-box {
+        width: 70%;
+        padding: 20px;
+        margin: 20px auto;
+        box-sizing: content-box;
+        background-color: #dff7e4;
+        border: 5px dashed #006400;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+      .yoga-box {
+        width: 70%;
+        padding: 20px;
+        margin: 20px auto;
+        box-sizing: border-box;
+        background-color: #fff3e6;
+        border: 5px solid #ff7f50;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      #walking-box {
+        width: 70%;
+        padding: 20px;
+        margin: 20px auto;
+        box-sizing: content-box;
+        background-color: #eaf3f7;
+        border: 5px double #4682b4;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+      .multiple-border-images {
+        width: 70%;
+        padding: 20px;
+        margin: 20px auto;
+        background-color: #f0f0f0;
+        border: 15px solid transparent;
+        border-image: url("https://via.placeholder.com/150/ff7f7f/ffffff?text=Top")
+            30 repeat,
+          url("https://via.placeholder.com/150/7f7fff/ffffff?text=Left") 30
+            repeat,
+          url("https://via.placeholder.com/150/7fff7f/ffffff?text=Bottom") 30
+            repeat,
+          url("https://via.placeholder.com/150/ffff7f/ffffff?text=Right") 30
+            repeat;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="cycling-box">
+      <h2>Cycling: Content Box</h2>
+      <p>
+        Welcome to the cycling section! This content box demonstrates how the
+        padding affects the overall box size.
+      </p>
+    </div>
+
+    <div class="fitness-box">
+      <h2>Fitness: Border Box</h2>
+      <p>
+        Fitness is all about staying healthy. This div uses border-box for
+        box-sizing where the padding and border are included in the width.
+      </p>
+    </div>
+
+    <div id="gardening-box" style="margin-bottom: 50px">
+      <h2>Gardening One</h2>
+      <p>
+        Gardening is a peaceful hobby. The content box here demonstrates how
+        padding affects the layout while keeping the border and outline visible.
+      </p>
+    </div>
+
+    <div id="gardening-box">
+      <h2>Gardening Two</h2>
+      <p>
+        Gardening is the practice of growing plants in a garden for a variety of
+        reasons, including aesthetics, health, and food production.
+      </p>
+    </div>
+
+    <div class="reading-box">
+      <h2>Reading Book</h2>
+      <p>
+        Reading books is a great way to relax and expand your knowledge. This
+        example uses the border-box model where padding and border are inside
+        the width.
+      </p>
+    </div>
+
+    <div id="exercise-box">
+      <h2>Exercise</h2>
+      <p>
+        Exercise helps maintain physical fitness and health. This content box
+        uses a dashed green border for a vibrant look.
+      </p>
+    </div>
+
+    <div class="yoga-box">
+      <h2>Yoga</h2>
+      <p>
+        Yoga is a spiritual and physical practice that promotes mindfulness and
+        flexibility. This div has a solid coral border.
+      </p>
+    </div>
+
+    <div id="walking-box">
+      <h2>Walking</h2>
+      <p>
+        Walking is a simple and effective form of exercise. This box uses a
+        double border style for a unique design.
+      </p>
+    </div>
+  </body>
+</html>

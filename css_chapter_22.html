@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chapter 22</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 0;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 20px;
+        padding: 20px;
+      }
+      .grid-item {
+        border: 1px solid #ccc;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+      .grid-item img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+      }
+      @media (max-width: 768px) {
+        .container {
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+      }
+      @media (max-width: 480px) {
+        .container {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="grid-item">
+        <img src="Image_ch_22/img2.jpg" alt="Image 1" />
+        <h3>Outdoor Scenery</h3>
+        <p>
+          A breathtaking sunrise paints the sky with hues of orange and pink,
+          casting a warm glow over the peaceful landscape. The tranquil scene of
+          the sun rising over the horizon creates a sense of calm and renewal.
+        </p>
+      </div>
+      <div class="grid-item">
+        <img src="Image_ch_22/img4.jpg" alt="Image 2" />
+        <h3>Beautiful Scenery Cloud</h3>
+        <p>
+          The sky is adorned with fluffy, white clouds that drift lazily across
+          a vast, serene landscape. The soft light and gentle movement of the
+          clouds create a peaceful, almost dreamlike atmosphere.
+        </p>
+      </div>
+      <div class="grid-item">
+        <img src="Image_ch_22/img1.jpg" alt="Image 3" />
+        <h3>Natural Landscape</h3>
+        <p>
+          A stunning nature landscape unfolds with lush greenery, rolling hills,
+          and vibrant skies. The harmony of mountains, rivers, and forests
+          creates a serene and tranquil atmosphere, inviting peaceful
+          reflection.
+        </p>
+      </div>
+      <div class="grid-item">
+        <img src="Image_ch_22/img3.jpg" alt="Image 4" />
+        <h3>Sandy Bay</h3>
+        <p>
+          Sandy Bay offers a peaceful retreat with its golden shores and gentle
+          waves. The calm, clear waters and wide stretches of sand make it an
+          ideal spot for relaxation and leisurely strolls along the coast.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

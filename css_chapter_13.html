@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapter 13</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .topic {
+        margin: 20px auto;
+        padding: 15px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+        width: 90%;
+      }
+
+      #ex_1 {
+        color: blueviolet;
+      }
+      #ex_1 {
+        color: rgb(126, 126, 201);
+      }
+
+      #heading-one {
+        color: violet;
+      }
+
+      .heading.first {
+        color: indigo;
+      }
+
+      body .heading {
+        color: blue;
+      }
+
+      .heading {
+        color: green;
+      }
+
+      body h1 {
+        color: rgb(184, 184, 21);
+      }
+
+      h1 {
+        color: orange;
+      }
+
+      * {
+        color: rgba(209, 69, 27, 0.836);
+      }
+
+      #heading-earthquake {
+        color: green !important;
+      }
+
+      .parent {
+        color: red;
+      }
+
+      .line {
+        color: rgb(86, 126, 86);
+      }
+
+      .first-line {
+        color: inherit;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="topic">
+      <h2>Rule 1: The Last Declaration Will Win</h2>
+      <h3 id="ex_1">Local Team Wins Championship</h3>
+      <p>
+        The local soccer team secured their victory in the finals last night
+        with an outstanding performance.
+      </p>
+    </div>
+
+    <div class="topic">
+      <h2>Rule 2: The More Specific Declaration Will Win</h2>
+      <h1 id="heading-one" class="heading first">Big Earthquake Hits City</h1>
+      <p>
+        A massive earthquake struck the city this morning. Authorities are on
+        alert.
+      </p>
+      <h1 id="heading-two" class="heading">
+        Experts' Opinion about the Earthquake
+      </h1>
+      <p>
+        Experts are investigating the causes behind the quake, with thousands
+        displaced and several buildings damaged.
+      </p>
+    </div>
+
+    <div class="topic">
+      <h2>
+        Rule 3: Inline Style Is Preferred to both Internal and External Styles
+      </h2>
+      <h2 style="color: rgb(99, 43, 43)">Local Team Wins Championship</h2>
+      <p>
+        The fans were ecstatic as the team scored the final goal in the last
+        minute of extra time, sealing their victory and winning the championship
+        for the third year in a row.
+      </p>
+    </div>
+
+    <div class="topic">
+      <h2>Rule 4: “!important” Declaration Is the Strongest Rule</h2>
+      <h1 id="heading-earthquake" style="color: rgb(95, 83, 83)">
+        Powerful earthquake in Caribbean
+      </h1>
+      <p>
+        Earthquake, any sudden shaking of the ground caused by the passage of
+        seismic waves through Earth's rocks.
+      </p>
+    </div>
+
+    <div class="topic">
+      <h2>Inheritance</h2>
+      <article class="parent">
+        <h1>How Do Earthquake Early Warning Systems Work?</h1>
+        <p class="line first-line">
+          Earthquake early warning systems don't predict earthquakes.
+        </p>
+        <p class="line second-line">
+          Instead, they detect ground motion as soon as an earthquake begins and
+          quickly send alerts that a tremor is on its way, giving people crucial
+          seconds to prepare.
+        </p>
+      </article>
+    </div>
+  </body>
+</html>

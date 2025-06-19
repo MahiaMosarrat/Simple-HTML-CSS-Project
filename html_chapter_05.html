@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapter 05</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        padding: 20px;
+      }
+      fieldset {
+        background-color: #fff;
+        border: 2px solid #007bff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 80%;
+        margin: 0 auto;
+      }
+      legend {
+        font-size: 1.5em;
+        font-weight: bold;
+        color: #007bff;
+        padding: 0 10px;
+      }
+      input[type="file"],
+      input[type="date"],
+      input[type="time"],
+      input[type="datetime-local"],
+      input[type="color"],
+      input[type="text"],
+      input[type="email"],
+      input[type="number"],
+      input[type="password"],
+      input[type="range"],
+      textarea,
+      select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+      }
+      input[type="checkbox"],
+      input[type="radio"] {
+        margin-right: 5px;
+      }
+      button {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+      label {
+        font-weight: bold;
+        margin-bottom: 5px;
+        display: inline-block;
+      }
+      h2 {
+        color: #007bff;
+      }
+      #passmessage {
+        font-size: 12px;
+        margin-top: 5px;
+      }
+      .form-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <form enctype="multipart/form-data">
+        <fieldset>
+          <legend>Login Form</legend>
+          <input type="hidden" />
+
+          <h2>Upload Image</h2>
+          <p><input type="file" id="file" onchange="LoadFile(event)" /></p>
+          <br />
+          <p><img id="imageoutput" width="100" /></p>
+          <br />
+
+          <h2>Admission Information</h2>
+          <label for="adDate">Admission Date</label>
+          <input id="adDate" type="date" name="adDate" /><br />
+
+          <label for="adTime">Admission Time</label>
+          <input id="adTime" type="time" name="adTime" /><br />
+
+          <label for="adDate">Admission DateTime</label>
+          <input id="adDate" type="datetime-local" name="adDate" /><br />
+
+          <label>Color</label>
+          <input type="color" name="bgcolor" /><br />
+
+          <h2>User Details</h2>
+          <label for="username">User Name :</label>
+          <input
+            id="username"
+            name="username"
+            readonly
+            placeholder="Enter user name"
+            style="margin-bottom: 10px"
+          /><br />
+
+          <label for="email">Email :</label>
+          <input
+            type="email"
+            placeholder="Enter Email"
+            style="margin-bottom: 10px"
+            required
+          />*<br />
+
+          <label for="age">Age</label>
+          <input
+            id="age"
+            name="age"
+            type="number"
+            style="margin-bottom: 10px"
+          /><br />
+
+          <h2>Modules</h2>
+          <label>Select Module:</label>
+          <input type="checkbox" id="module" name="C#" value="C#" /><label
+            >C#</label
+          >
+          <input type="checkbox" id="module" name="SQL" value="SQL" /><label
+            >SQL</label
+          ><br />
+
+          <h2>Gender</h2>
+          <label>Select Gender</label>
+          <input type="radio" id="gender" name="gender" value="Male" /><label
+            >Male</label
+          >
+          <input type="radio" id="gender" name="gender" value="Female" /><label
+            >Female</label
+          ><br />
+
+          <h2>Mark</h2>
+          <label>Select Mark</label>
+          <input
+            type="range"
+            id="pointInputId"
+            value="24"
+            min="1"
+            max="100"
+            oninput="pointOutPutId.value=pointInputId.value"
+          />
+          <output id="pointOutPutId">24</output><br />
+
+          <h2>Password</h2>
+          <label for="password">Password :</label>
+          <input
+            onkeyup="check()"
+            style="margin-bottom: 10px"
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter password"
+          /><br />
+
+          <label for="confirtm_password">Confirm :</label>
+          <input
+            onkeyup="check()"
+            style="margin-bottom: 10px"
+            type="password"
+            id="confirtm_password"
+            name="confirtm_password"
+          />
+          <span id="passmessage"></span><br />
+
+          <h2>Additional Information</h2>
+          <textarea
+            name="comment"
+            rows="3"
+            cols="30"
+            style="margin-bottom: 10px"
+          ></textarea
+          ><br />
+
+          <h2>Car Info</h2>
+          <label for="car">Car Info (Disabled)</label>
+          <select name="car" style="margin-bottom: 10px" disabled>
+            <optgroup label="Antique">
+              <option value="Toyota">Toyota</option>
+              <option value="Ford">Ford</option>
+            </optgroup>
+            <optgroup label="NonAntique">
+              <option value="BMW">BMW</option>
+              <option value="Audi">Audi</option>
+            </optgroup></select
+          ><br />
+
+          <label for="car">Car DropDown</label>
+          <select name="car" style="margin-bottom: 10px" multiple>
+            <option value="Toyota">Toyota</option>
+            <option value="Ford">Ford</option>
+            <option value="BMW">BMW</option>
+            <option value="Audi">Audi</option></select
+          ><br />
+
+          <label for="car">Car List</label>
+          <datalist id="car-list" style="margin-bottom: 10px">
+            <option value="Volvo"></option>
+            <option value="Ford"></option>
+            <option value="Audi"></option>
+            <option value="Noah"></option>
+          </datalist>
+          <input
+            type="text"
+            name="car"
+            list="car-list"
+            style="margin-bottom: 10px"
+          /><br />
+
+          <button type="button" onclick="alert('You are Logged in')">
+            Login</button
+          ><br />
+          <button
+            type="button"
+            value="Click Here"
+            onclick="alert('Hello World')"
+          >
+            Click Here
+          </button>
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+          <input
+            type="image"
+            src="images/clickmebtn.jpg"
+            alt="Submit"
+            width="100"
+          />
+        </fieldset>
+      </form>
+    </div>
+
+    <script>
+      var LoadFile = function (event) {
+        var image = document.getElementById("imageoutput");
+        image.src = URL.createObjectURL(event.target.files[0]);
+      };
+
+      var check = function () {
+        if (
+          document.getElementById("password").value ==
+          document.getElementById("confirtm_password").value
+        ) {
+          document.getElementById("passmessage").innerHTML = "";
+        } else {
+          document.getElementById("passmessage").style.color = "red";
+          document.getElementById("passmessage").innerHTML =
+            "Password not matching";
+        }
+      };
+    </script>
+  </body>
+</html>

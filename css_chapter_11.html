@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapter 11</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      #firstParagraph {
+        color: red;
+        font-size: 28px;
+      }
+
+      article {
+        font-size: 20px;
+      }
+
+      .custom {
+        font-size: 1.5em;
+      }
+
+      .parent {
+        font-size: 15px;
+      }
+
+      .child {
+        font-size: 2em;
+      }
+
+      #internalCss {
+        color: blue;
+        font-size: 25px;
+      }
+
+      .container {
+        padding: 20px;
+        margin: 0 auto;
+        max-width: 1000px;
+      }
+
+      .section {
+        margin-bottom: 40px;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        background-color: #f9f9f9;
+      }
+
+      h2,
+      h3 {
+        margin-bottom: 15px;
+      }
+
+      .content {
+        margin: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="section">
+        <p id="firstParagraph">
+          Bangladesh, to the east of India on the Bay of Bengal, is a South
+          Asian country marked by lush greenery and many waterways.
+        </p>
+      </div>
+
+      <div class="section">
+        <h3>How to comment <b>single line</b> in CSS</h3>
+        <p class="content">/* Single Line */</p>
+        <br />
+        <h3>How to comment <b>multiple line</b> in CSS</h3>
+        <p class="content">/* Multiple Lines */</p>
+      </div>
+
+      <div class="section">
+        <article>
+          <h2>Example of <i>Rem</i></h2>
+          <p>
+            Hypertext Markup Language is the standard markup language for
+            documents designed to be displayed in a web browser.
+          </p>
+          <p class="custom">
+            The role of HTML in web development is to provide the backbone and
+            structure of a web page. It defines the layout and organization of
+            content on a web page by using a ranked structure of elements.
+          </p>
+        </article>
+      </div>
+
+      <div class="section">
+        <h2>Example of <i>Em</i></h2>
+        <div class="parent">
+          Welcome to the page!
+          <div class="child">
+            This section contains an introduction to the website.
+            <div class="child">
+              Oops! This section became too large unexpectedly!
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Different types of CSS</h2>
+        <h3>Example of Inline CSS</h3>
+        <p style="color: red; font-size: 26px" class="content">
+          The primary function of CSS is to define the styling and layout of web
+          pages, making them more visually appealing, user-friendly, and
+          accessible.
+        </p>
+        <p class="content">
+          CSS provides a way to define and apply styles consistently across all
+          pages of a website, making it easier for developers to maintain and
+          update their designs.
+        </p>
+
+        <h3>Example of Internal CSS</h3>
+        <p id="internalCss" class="content">
+          HTML is used to provide structure to a webpage and make it accessible
+          to users of the internet through text, visual formatting and search
+          factors.
+        </p>
+
+        <h3>Example of External CSS</h3>
+        <p id="externalCss" class="content">
+          A CSS property determines an HTML element's style or behavior.
+          Examples include font style, transform, border, color, and margin.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

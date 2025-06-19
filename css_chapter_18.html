@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapter 18</title>
+    <style>
+      .newspaper {
+        column-count: 3;
+        column-gap: 40px;
+        column-rule: 1px solid black;
+      }
+      h1 {
+        column-span: all;
+        text-align: center;
+      }
+      img {
+        width: 400px;
+        height: 200px;
+        border: 1px solid black;
+        object-fit: scale-down;
+      }
+      .my-element {
+        cursor: pointer;
+      }
+      table {
+        border-collapse: collapse;
+        border: 1px solid green;
+        width: 100%;
+      }
+      th {
+        border: 1px solid red;
+        height: 30px;
+      }
+      td {
+        border: 1px solid blue;
+        height: 50px;
+        text-align: center;
+        vertical-align: top;
+      }
+      .col {
+        display: inline-block;
+        width: 150px;
+      }
+      ul.circle {
+        list-style: circle;
+      }
+      ul.square {
+        list-style: square;
+      }
+      ol.upper-roman {
+        list-style-type: upper-roman;
+      }
+      ol.lower-alpha {
+        list-style-type: lower-alpha;
+      }
+      .container {
+        border: 1px solid black;
+        width: 300px;
+        height: 100px;
+      }
+      .inline-blocks {
+        display: inline-block;
+        border: 1px solid red;
+        height: 40px;
+      }
+      .normal-blocks {
+        border: 1px solid blue;
+      }
+      .hidden {
+        display: none;
+      }
+      .invisible {
+        display: hidden;
+      }
+      .container2 {
+        border: 1px solid black;
+        width: 200px;
+        height: 100px;
+        overflow: auto;
+      }
+      .child {
+        margin: 10px;
+        border: 1px solid black;
+        background-color: bisque;
+        height: 150px;
+      }
+      .container3 {
+        background-color: rgb(255, 0, 0);
+        padding: 20px;
+        margin: 10px;
+      }
+      .container.opacity {
+        opacity: 0.5;
+      }
+      .container.transparent {
+        background-color: rgba(255, 0, 0, 0.5);
+      }
+      .child3 {
+        border: 1px solid black;
+      }
+      #shadowtext {
+        text-shadow: 3px 3px 5px red;
+      }
+      #shadow {
+        border: 1px solid black;
+        box-shadow: 8px 0 10px gray, 0 8px 10px grey;
+      }
+      .divtest1 {
+        transform: rotate(180deg);
+      }
+      .divtest2 {
+        transform: rotate(-20deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="inline-blocks" style="margin-bottom: 20px">
+        Lenten Rose: A five-petal flower with unique characteristics and
+        spiritual
+      </div>
+      <br />
+      <div class="inline-blocks" style="margin: 20px">
+        Swamp Candle: A five-petal flower with unique characteristics and
+        spiritual significance
+      </div>
+      <br />
+      <div class="normal-blocks" style="margin-top: 30px">
+        Forget-Me-Not: A five-petal flower with unique characteristics and
+        spiritual significance.
+      </div>
+    </div>
+    <br />
+    <p style="margin-top: 30px">
+      Lenten Rose: A five-petal flower with<span class="hidden">unique</span>
+      characteristics and spiritual
+    </p>
+    <br />
+    <p style="margin-top: 40px">
+      Swamp Candle: A five-petal flower with<span class="invisible"
+        >unique</span
+      >
+      characteristics and spiritual significance
+    </p>
+    <br />
+
+    <div class="container2">
+      <div class="child">
+        The chief adviser has strongly condemned the recent mob attack on a
+        bookstall at the Amar Ekushey Book Fair, calling it an affront to the
+        rights of Bangladeshi citizens and the country's laws. In a statement,
+      </div>
+    </div>
+    <br />
+
+    <div class="container3">
+      <div class="child3">This is an example of opacity.</div>
+    </div>
+    <br />
+    <div class="container opacity">
+      <div class="child3">This is an example of opacity.</div>
+    </div>
+    <br />
+    <div class="container transparent">
+      <div class="child3">This is an example of opacity.</div>
+    </div>
+    <br />
+
+    <h1 id="shadowtext">This is a an example of text shadow</h1>
+    <br />
+    <div id="shadow">This is a shadow div</div>
+    <br />
+
+    <div class="newspaper">
+      <h1>
+        Yunus condemns attack at Amar Ekushey Boi Mela, orders swift action
+      </h1>
+      <p>
+        The chief adviser has strongly condemned the recent mob attack on a
+        bookstall at the Amar Ekushey Book Fair, calling it an affront to the
+        rights of Bangladeshi citizens and the country's laws. In a statement,
+        the chief adviser denounced the violence, emphasising that it goes
+        against the open-minded spirit of the book fair, which honours the
+        language martyrs of February 21, 1952, according to the CA's press
+        wing.The Ekushey Boi Mela, a cherished cultural event, serves as a vital
+        gathering place for writers and readers, it said. The interim government
+        has directed the police and Bangla Academy to investigate the attack and
+        bring those responsible to justice. Security measures at the fair have
+        been intensified to prevent further incidents.
+      </p>
+    </div>
+    <br />
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwVb3KyPBJfQan_eS3-rDzpt3OS0sPkFxL3w&s"
+    /><br />
+    <p class="my-element">
+      Swamp Candle: A five-petal flower with unique characteristics and
+      spiritual significance
+    </p>
+    <br />
+
+    <div>Happiness is the most essential thing in life.</div>
+    <br />
+    <div class="divtest">
+      As human beings, we feel happy when we feel satisfied and content inside.
+    </div>
+    <br />
+    <div class="divtest1">It is an emotion that can only be felt or lived.</div>
+    <br />
+    <div class="divtest2">
+      True happiness means the satisfaction that you find worthy.
+    </div>
+    <br />
+
+    <table style="margin-top: 100px">
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Mahia</td>
+          <td>Mosarrat</td>
+        </tr>
+        <tr>
+          <td>Farjana</td>
+          <td>Sathi</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="col">
+      <p>Unordered List</p>
+      <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+      </ul>
+      <ul class="circle">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+      </ul>
+      <ul class="square">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+      </ul>
+    </div>
+    <div class="col">
+      <p>Ordered List</p>
+      <ol>
+        <li>Sunflower</li>
+        <li>Rose</li>
+        <li>Lily</li>
+      </ol>
+      <ol class="upper-roman">
+        <li>Sunflower</li>
+        <li>Rose</li>
+        <li>Lily</li>
+      </ol>
+      <ol class="lower-alpha">
+        <li>Sunflower</li>
+        <li>Rose</li>
+        <li>Lily</li>
+      </ol>
+    </div>
+  </body>
+</html>
